@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/gauge.min.js"></script>
+</head>
+<body>
+    <section id="main">
+        <h1>DEMO LPC845</h1>
+    </section>
+    <section id="info">
+        <div class="leds">
+            <div class="led-box" style="display: none;">
+                <button id="buzzer" class="led-off led-white"></button>
+                <p>BUZZER</p>
+            </div>
+            <div class="led-box">
+                <button id="ledVerde" class="led-off led-green"></button>
+                <p>VERDE</p>
+            </div>
+            <div class="led-box">
+                <button id="ledRojo" class="led-off led-red"></button>
+                <p>ROJO</p>
+            </div>
+            <div class="led-box">
+                <button id="ledAzul" class="led-off led-blue"></button>
+                <p>AZUL</p>
+            </div>
+        </div> 
+        <div class="digits">
+            <button class="btn-plus" id="btn-less"> < </button>
+            <h5 id="number">00</h5>
+            <button class="btn-plus" id="btn-plus"> > </button>
+        </div>
+        <div class="switches">
+            <div class="switch">
+                <h4 class="sw-off" id="sw-s1"> OFF </h4>
+                <p>TECLA S1</p>
+            </div>
+            <div class="switch" style="display: none;">
+                <h4 class="sw-off" id="sw-s2"> OFF </h4>
+                <p>TECLA S2</p>
+            </div>
+            <div class="switch">
+                <h4 class="sw-off" id="sw-isp"> OFF </h4>
+                <p>TECLA ISP</p>
+            </div>
+            <div class="switch">
+                <h4 class="sw-off" id="sw-user"> OFF </h4>
+                <p>TECLA USER</p>
+            </div>
+        </div>
+        <div class="output">
+            <div class="gauge">
+                <h3>Humedad (HR)</h3>
+                <canvas id="gauge-hum"></canvas>
+                <p id="value-hum">120</p>
+            </div>
+            <div class="gauge">
+                <h3>Temperatura (°C)</h3>
+                <canvas id="gauge-temp"></canvas>
+                <p id="value-temp">120</p>
+            </div>
+            <div class="gauge">
+                <h3>Presion (hPa)</h3>
+                <canvas id="gauge-pres"></canvas>
+                <p id="value-pres">120</p>
+            </div>
+            <div class="gauge">
+                <h3>I. Luminica (lux)</h3>
+                <canvas id="gauge-lux"></canvas>
+                <p id="value-lux">120</p>
+            </div>
+            <div class="gauge">
+                <h3>PRESET R21</h3>
+                <canvas id="gauge-r21"></canvas>
+                <p id="value-r21">120</p>
+            </div>
+            <div class="gauge">
+                <h3>PRESET R22</h3>
+                <canvas id="gauge-r22"></canvas>
+                <p id="value-r22">120</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./js/index.js"></script>
+</html>

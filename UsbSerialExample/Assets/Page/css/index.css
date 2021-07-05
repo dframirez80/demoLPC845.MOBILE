@@ -1,0 +1,199 @@
+:root{
+    --color1: rgba(81, 255, 0, 0.699);
+    --color2: rgba(0, 204, 255, 0.699);
+    --color3: rgba(25, 0, 255, 0.699);
+    --color4: rgba(246, 247, 245, 0.911);
+    --color5: rgb(0, 0, 0);
+}
+@font-face {
+    font-family: digital;
+    src:url("../fonts/digital7.ttf");
+}
+@font-face {
+    font-family: Poppins;
+    src:url("../fonts/PoppinsBold.ttf");
+}
+ 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+html, body {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(238, 247, 139, 0.671) 0%, rgba(214, 214, 223, 0.973) 34%, rgba(224, 228, 230, 0.073) 100%),url(../img/logo_dfr.png),url(../img/fondoE.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Section */
+section {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* button */
+button{
+    outline: 0;
+}
+.btns{
+    outline: 0;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--color3);
+    color: var(--color4);
+}
+
+#info{
+    height: auto;
+}
+div{
+    display: flex;
+}
+
+/* leds */
+.leds{
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    justify-content: space-evenly;
+}
+.led-box {
+    display: flex;
+    flex-flow: column;
+}
+.led-box p{
+    font-size: 12px;
+    text-align: center;
+    margin: 1em;
+}
+.led-white,.led-red, .led-blue, .led-green{
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}  
+.led-white{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(250, 248, 248, 0.5) 0 2px 12px;
+}
+.led-red {
+    background-color: #F00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+} 
+.led-green {
+    background-color: #ABFF00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+.led-blue {
+    background-color: #0105ffb7;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3F8CFF 0 2px 14px;
+}
+.led-off{
+    background-color: rgba(173, 169, 169, 0.808);
+    box-shadow: rgba(19, 18, 18, 0.2) 0 -1px 7px 1px, inset #5e5353 0 -1px 9px, rgba(83, 81, 81, 0.5) 0 2px 12px;
+}
+/* switches */
+.switches{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.switch{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    flex-flow: column;
+    align-items: center;
+    background: rgba(167, 216, 139, 0.767);
+    border-radius: 20px;
+}  
+.switch p{
+    padding: 10px;
+}
+
+.sw-off{
+    font-size: 1.5rem;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    border: rgb(160, 158, 158) solid 10px;
+    text-align: end;
+    padding: 3px 10px;
+    opacity: 0.6;
+    transition: opacity .5s linear;
+    color: rgb(38, 37, 97);
+    background: linear-gradient(90deg, rgba(34,34,193,0.7315301120448179) 45%, rgba(215,241,23,0.6615021008403361) 55%);
+}
+.sw-on{
+    opacity: 1;
+    transition: opacity 1s linear;
+    text-align: start;
+    color: black;
+    background: linear-gradient(90deg, rgba(215,241,23,0.6615021008403361) 45%, rgba(34,34,193,0.7315301120448179) 55%);
+}
+/* digitos */
+.digits{
+    display: flex;
+    max-width: 300px;
+    height: 30%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.493);
+    border-radius: 20px;
+}
+.digits h5{
+    width: 150px;
+    color: greenyellow;
+    padding: 10px;
+    font-family: digital, sans-serif;
+    font-size: 6rem;
+    text-align: center;
+}
+
+.btn-plus{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-image: linear-gradient(90deg, #06e450 0%, #03f1c6 100%);
+}
+.btn-plus:active{
+    background-image: linear-gradient(45deg, #437de9 0%, #e9ec33 100%);
+}
+.output{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    row-gap: 10px;
+}
+.gauge{
+    display: flex;
+    border: 5px solid rgba(2, 3, 53, 0.582);
+    border-radius: 30px;
+    flex-flow: column;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.gauge p{
+    transform: translate(0%,-30px);
+    text-align: center;
+}
